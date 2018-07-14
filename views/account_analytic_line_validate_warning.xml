@@ -1,0 +1,30 @@
+<odoo>
+	<data>
+
+		<record id="account_analytic_line_validate_warning_form" model="ir.ui.view">
+			 <field name="name">account.analytic.line.validate.warning.form</field>
+			 <field name="model">account.analytic.line.validate.warning</field>
+			 <field name="arch" type="xml"> 
+				 <form string="Validate Warning">
+					<field name="title" nolabel="1"/>
+				 	<field name="message" nolabel="1"/> 
+				 	<footer>
+				 		<button string="Continue" class="oe_highlight" name="validate_lines" type="object"/>
+						<button string="Cancel" class="btn btn-default" special="cancel"/>
+				 	</footer> 
+				 </form> 
+			</field>
+		</record>
+	
+	    <record id="action_account_analytic_line_validate_warning" model="ir.actions.act_window">
+	        <field name="name">Validate Warning</field>
+	        <field name="res_model">account.analytic.line.validate.warning</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">form</field>
+	        <field name="view_id" ref="account_analytic_line_validate_warning_form"/>
+	        <field name="target">new</field>
+	    </record>
+
+	</data>
+</odoo>
+

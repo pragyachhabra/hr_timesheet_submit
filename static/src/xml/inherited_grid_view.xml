@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates id="grid_view_submit" inherit_id="grid_view.templates">
+    <t t-extend="grid.GridArrows">
+        <t t-jquery="div" t-operation="append">
+             <button style="display: none;" class="btn btn-sm btn-default grid_button_submit" type="button">
+                Submit
+            </button>
+        </t>
+    </t>
+</templates>
